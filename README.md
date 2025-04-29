@@ -34,10 +34,10 @@ Follow this guide carefully, as there are multiple steps to make it work correct
 1. **Configure** `monitoring/config.py`:
    ```python
    this_machine_hostname = "monitor1"  # Hostname of the current machine
-   this_machine_ip = "10.20.86.13"      # IP address of the current machine
+   this_machine_ip = "10.20.30.13"      # IP address of the current machine
 
    hostname = "monitor2"               # Hostname of the first machine to monitor
-   ip = "10.20.86.14"                  # IP address of the first machine to monitor
+   ip = "10.20.30.14"                  # IP address of the first machine to monitor
    ```
 
 2. **Initialize Certificates and TOTP**:
@@ -66,7 +66,7 @@ Follow this guide carefully, as there are multiple steps to make it work correct
    - Enable **Developer Mode** in account settings.
    - Right-click the category -> **Copy ID** and set:
    ```python
-   CATEGORY_ID = 2345657868429842397  # Example ID (without quotes)
+   CATEGORY_ID = 234564564542397  # Example ID (without quotes)
    ```
 
 7. **Build and Start the Docker Container** 🛠️
