@@ -1,0 +1,16 @@
+services:
+  service_name:
+    image: monitor_img:latest  # nome dell'immagine
+    build:
+      context: . # Specifica la directory del Dockerfile 
+      dockerfile: dockerfile # Nome del Dockerfile
+    container_name: monitor
+    # ports:
+    #   - "5000:5000"
+    volumes:
+      - ./monitoring/config.py:/monitoring/config.py
+      - ./monitoring/mon/hosts.json:/monitoring/mon/hosts.json
+      - ./monitoring/server/ssl:/monitoring/server/ssl
+    restart: unless-stopped
+    network_mode: "host"      # Equivalente di --net host
+    privileged: true          # Equivalente di --privileged
